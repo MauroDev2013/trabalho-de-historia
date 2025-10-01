@@ -154,14 +154,14 @@ html, body {
   }
 
   .icone {
-    scale: 2.3;
+    scale: 1.8;
     justify-content: center;
   }
 
   .menu button {
     scale: 1.2;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     font-size: 0px;
     justify-content: center;
   }
@@ -171,7 +171,7 @@ html, body {
   }
 
   .nomeCriador {
-    font-size: 23px;
+    font-size: 16pt;
     font-weight: bold;
     margin: 3px;
     padding: 1.5px;
