@@ -4,6 +4,7 @@ html, body {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  color: white;
 }
 
 .container {
@@ -26,26 +27,44 @@ html, body {
 
 .menu {
   display: flex;
-  margin-top: 40px;
+  padding-left: 50px;
+  color: white;
+  font-size: 18pt;
+  text-align: center;
+  margin-top: 50px;
   flex-direction: column;
-  gap: 24px;
-}
-
-.menu button {
-  width: 300px;
-  height: 40px;
-  font-size: 22px;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-  background: rgb(73, 35, 35);
-  cursor: pointer;
-  transition: color 0.3s;
+  justify-content: center;
+  gap: 14px;
+  background-color: #161616b4;
+  width: 350px;
+  height: 350px;
   border-radius: 5px;
   box-shadow: 3px 3px 3px black;
 }
 
-.menu .canjica, .menu .pao-acucar, .menu .chocolate-quente {
-  background-image: linear-gradient(to right, rgba(58, 134, 255, 0.8), rgba(2, 23, 56, 0.8));
+.menu button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 275px;
+  height: 45px;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  background-image: linear-gradient(rgba(58, 134, 255, 0.8), rgba(2, 23, 56, 0.8));
+  cursor: pointer;
+  transition: color 0.3s;
+  border-radius: 50px;
+  box-shadow: 3px 3px 3px black;
+  margin: 20px;
+  padding: 5px 15px;
+  border: 2px solid white;
+}
+
+.icone {
+  scale: 1.7;
+  justify-content: center;
 }
 
 .menu button:hover {
@@ -60,17 +79,13 @@ html, body {
   background-image: 
     linear-gradient(to top, rgba(58, 134, 255, 0.8), rgba(255, 201, 60, 0.8)), 
     url('../src/assets/images/comidas.png');
-  background-size: cover, cover;
-  background-position: center, center;
-  background-repeat: no-repeat, no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   box-shadow: 3px 3px 5px black;
-}
-
-.imagem {
-  background-image: linear-gradient(to right, #000, #3b3b3b);
 }
 
 .titulo {
@@ -78,4 +93,117 @@ html, body {
   font-size: 40pt;
   font-weight: bold;
   text-align: center;
+}
+
+.primeiraDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 95px;
+  margin-top: 20px;
+}
+
+.nomeCriador {
+  font-size: 23pt;
+  font-weight: bold;
+  color: #ff0707;
+}
+
+.segundaDiv {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+
+.imagem-criador {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 2px 2px 6px black;
+  gap: 20px;
+  margin: 20px;
+  margin-top: 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .esquerdo {
+    flex: none;
+    height: 40vh;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .botoes {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin: 0;
+  }
+
+  .icone {
+    scale: 2.3;
+    justify-content: center;
+  }
+
+  .menu button {
+    scale: 1.2;
+    width: 80px;
+    height: 80px;
+    font-size: 0px;
+    justify-content: center;
+  }
+
+  .titulo {
+    font-size: 28pt;
+  }
+
+  .nomeCriador {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 3px;
+    padding: 1.5px;
+  }
+
+  .primeiraDiv {
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .segundaDiv {
+    flex-direction: row;
+    gap: 0px;
+    margin-left: 40px;
+    padding: 0;
+    width: 80%;
+    height: auto;
+    justify-items: center;
+  }
+
+  .imagem-criador {
+    scale: 0.9;
+    gap: 0;
+    margin-right: 0;
+    padding-right: 0;
+    width: 100px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
 }
